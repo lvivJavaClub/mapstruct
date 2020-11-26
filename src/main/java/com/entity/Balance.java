@@ -1,6 +1,8 @@
 package com.entity;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,5 +12,7 @@ public class Balance {
 
     private int id;
     private BigDecimal bookedBalance;
+    private Day dayEnum;
+    private LocalDateTime transactionDateTime;
 
 }
