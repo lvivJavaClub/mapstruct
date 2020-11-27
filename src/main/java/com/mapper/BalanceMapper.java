@@ -1,6 +1,7 @@
 package com.mapper;
 
 import com.entity.Balance;
+import com.entity.Currency;
 import com.external.dto.ExternalBalanceDto;
 import com.external.dto.ExternalCurrency;
 import org.mapstruct.AfterMapping;
@@ -22,12 +23,12 @@ public interface BalanceMapper {
     @Mapping(target = "currencyCode", source = "externalCurrency.externalCode")
     Balance mapWithCurrency(ExternalBalanceDto externalBalanceDto, ExternalCurrency externalCurrency);
 
-//    @InheritInverseConfiguration
-//    ExternalBalanceDto map(Balance externalBalanceDto);
+    @InheritInverseConfiguration
+    ExternalBalanceDto map(Balance externalBalanceDto);
 
-//    @Mapping(target = "code", source = "externalCode")
-//    @Mapping(target = "countryCode", source = "externalCountryCode")
-//    Currency mapCurrency(ExternalCurrency externalCurrency);
+    @Mapping(target = "code", source = "externalCode")
+    @Mapping(target = "countryCode", source = "externalCountryCode")
+    Currency mapCurrency(ExternalCurrency externalCurrency);
 
     @AfterMapping
     default void populateBalance(ExternalBalanceDto externalBalanceDto, @MappingTarget Balance balance) {

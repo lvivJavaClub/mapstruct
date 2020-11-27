@@ -10,9 +10,9 @@ import lombok.Setter;
 public class Balance {
 
     private int id;
-//    private int currencyCode;
+    private int currencyCode;
     private BigDecimal bookedBalance;
-//    private Currency currency;
+    private Currency currency;
     private LocalDateTime transactionDateTime;
 
 }
