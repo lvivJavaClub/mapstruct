@@ -9,8 +9,7 @@ import lombok.Setter;
 public class ExternalBalanceDto {
 
     private String arrangementId;
-    private BigDecimal bookedBalance1;
-    private BigDecimal bookedBalance2;
+    private BigDecimal bookedBalance;
     private ExternalDay externalDayEnum;
     private String transactionDate;
 

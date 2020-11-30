@@ -11,8 +11,8 @@ import lombok.Setter;
 public class Balance {
 
     private int id;
-    private BigDecimal bookedBalance1;
-    private BigDecimal bookedBalance2;
+    private BigDecimal bookedBalanceTest1;
+    private BigDecimal bookedBalanceTest2;
     private Day dayEnum;
     private LocalDateTime transactionDateTime;
 
